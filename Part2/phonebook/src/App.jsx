@@ -16,7 +16,7 @@ const App = () => {
 
   useEffect(() => {
     console.log("effect");
-    axios.get("http://localhost:3001/api/persons").then((res) => {
+    axios.get("/api/persons").then((res) => {
       console.log(res.data);
       setPersons(res.data);
     });

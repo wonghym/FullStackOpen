@@ -5,6 +5,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static("dist"));
 app.use(
   morgan(":method :url :status :res[content-length] - :response-time ms :post")
 );
@@ -62,7 +63,7 @@ app.post("/api/persons", (request, response) => {
   };
 
   persons = persons.concat(person);
-  response.json(persons);
+  response.json(person);
 });
 
 app.get("/api/persons/:id", (request, response) => {

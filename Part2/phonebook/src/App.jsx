@@ -11,12 +11,12 @@ const App = () => {
   const [newName, setNewName] = useState("");
   const [newNumber, setNewNumber] = useState("");
   const [search, setSearch] = useState("");
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     console.log("effect");
-    axios.get("http://localhost:3001/persons").then((res) => {
+    axios.get("http://localhost:3001/api/persons").then((res) => {
       console.log(res.data);
       setPersons(res.data);
     });

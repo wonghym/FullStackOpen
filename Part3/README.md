@@ -1,1 +1,1 @@
-link - https://fullstackopen-bj78.onrender.com/info
+link - https://fullstackopen-bj78.onrender.com/

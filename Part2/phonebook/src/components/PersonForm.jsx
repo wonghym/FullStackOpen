@@ -67,7 +67,9 @@ const PersonForm = (props) => {
           setError(false);
         })
         .catch((error) => {
-          console.log(error);
+          console.log(error.response.data.error);
+          setMessage(error.response.data.error);
+          setError(true);
         });
     }
   };
